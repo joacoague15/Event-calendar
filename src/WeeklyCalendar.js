@@ -47,7 +47,7 @@ const WeeklyCalendar = () => {
                     <Form>
                         <Form.Group className="mb-3">
                             <Form.Label>Day</Form.Label>
-                            <Form.Select aria-label="Day select" value={newEvent.day} onChange={(e) => setNewEvent({...newEvent, day: e.target.value})}>
+                            <Form.Select aria-label="Select a day" value={newEvent.day} onChange={(e) => setNewEvent({...newEvent, day: e.target.value})}>
                                 <option>Select a Day</option>
                                 {daysOfWeek.map(day => (
                                     <option key={day} value={day}>{day}</option>
@@ -56,7 +56,7 @@ const WeeklyCalendar = () => {
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Event Title</Form.Label>
-                            <Form.Control type="text" placeholder="Enter event title" value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title: e.target.value})} />
+                            <Form.Control type="text" placeholder="Choose a title" value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title: e.target.value})} />
                         </Form.Group>
                     </Form>
                 </Modal.Body>
